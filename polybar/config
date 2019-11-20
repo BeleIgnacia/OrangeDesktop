@@ -1,0 +1,86 @@
+;==========================================================
+;
+;  ______    ______   __    __  ________  ______   ______  
+; /      \  /      \ |  \  |  \|        \|      \ /      \ 
+;|  $$$$$$\|  $$$$$$\| $$\ | $$| $$$$$$$$ \$$$$$$|  $$$$$$\
+;| $$   \$$| $$  | $$| $$$\| $$| $$__      | $$  | $$ __\$$
+;| $$      | $$  | $$| $$$$\ $$| $$  \     | $$  | $$|    \
+;| $$   __ | $$  | $$| $$\$$ $$| $$$$$     | $$  | $$ \$$$$
+;| $$__/  \| $$__/ $$| $$ \$$$$| $$       _| $$_ | $$__| $$
+; \$$    $$ \$$    $$| $$  \$$$| $$      |   $$ \ \$$    $$
+;  \$$$$$$   \$$$$$$  \$$   \$$ \$$       \$$$$$$  \$$$$$$ 
+;                                                          
+;                                                          
+;==========================================================
+
+
+;; Global WM Settings
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+include-file = ~/.config/polybar/colors
+include-file = ~/.config/polybar/modules
+
+[bar/main]
+monitor = eDP1
+width = 98%:-5
+height = 32
+offset-x = 15
+offset-y = 1%
+bottom = false
+fixed-center = false
+line-size = 2
+radius = 8
+override-redirect = true
+
+background = ${color.bg}
+foreground = ${color.fg}
+font-0 = "Telegrama:pixelsize=10;4"
+font-1 = "Iosevka Nerd Font:pixelsize=13;3"
+
+cursor-click = pointer
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+modules-left = arch workspaces google github reddit facebook youtube
+modules-center = title
+modules-right = volume battery network date powermenu
+
+[bar/left]
+monitor = eDP1
+width = 98%:-5
+height = 32
+offset-x = 15
+offset-y = 1%
+bottom = true
+fixed-center = false
+line-size = 2
+radius = 8
+override-redirect = true
+
+background = ${color.bg}
+foreground = ${color.fg}
+font-0 = "Telegrama:pixelsize=10;3"
+font-1 = "Iosevka Nerd Font:pixelsize=13;3"
+
+cursor-click = pointer
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+modules-center = spotify
+
+;==============================
+;
+; ________   ______   ________ 
+;|        \ /      \ |        \
+;| $$$$$$$$|  $$$$$$\| $$$$$$$$
+;| $$__    | $$  | $$| $$__    
+;| $$  \   | $$  | $$| $$  \   
+;| $$$$$   | $$  | $$| $$$$$   
+;| $$_____ | $$__/ $$| $$      
+;| $$     \ \$$    $$| $$      
+; \$$$$$$$$  \$$$$$$  \$$      
+;
+;
+;==============================
